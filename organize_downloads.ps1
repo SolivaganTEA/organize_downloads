@@ -1,11 +1,10 @@
 # organize_downloads.ps1
 #Requires -Version 5.0
 
-$ErrorActionPreference = "Stop"   # останавливаемся при любой ошибке
+$ErrorActionPreference = "Stop"
 
 $DownloadsPath = "$env:USERPROFILE\Downloads"
 
-# Безопасное получение имени скрипта
 $ScriptName = if ($MyInvocation.MyCommand.Path) {
     Split-Path $MyInvocation.MyCommand.Path -Leaf
 } else { "" }
